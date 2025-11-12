@@ -1,51 +1,98 @@
-# 🎬 YouTube Analytics ETL Pipeline (with REST API)
+# 🎬 YouTube Analytics ETL Pipeline
 
-Production-style project that **extracts, transforms, and loads** YouTube data, stores it in SQLite, and exposes results through a **FastAPI** REST API.
+![API Documentation](images/api-docs.png)
+![Pipeline Running in Terminal](images/terminal-run.png)
+
+## 🚀 Overview
+The **YouTube Analytics ETL Pipeline** automates the extraction of raw YouTube data, transforms it into structured insights, and loads it into a database accessible via a **FastAPI** REST interface.  
+This project demonstrates professional ETL design, API development, and data workflow automation.
+
+---
 
 ## 💼 Business Value
-- Turn raw YouTube data into **actionable insights** (videos, channels, trends)
-- **API** enables dashboards and app integrations
-- Clear, professional structure that mirrors real projects
+- Converts raw YouTube data into **actionable business insights**  
+- Provides a **REST API** for dashboards, analytics tools, and apps  
+- Demonstrates **end-to-end data engineering workflow** — extraction, transformation, and loading  
+- Easy to deploy and scale for production data workflows  
 
-## 🛠 Tech Stack
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?logo=sqlite&logoColor=white)
-![Uvicorn](https://img.shields.io/badge/Uvicorn-003B57)
-![Pytest](https://img.shields.io/badge/Pytest-0A9EDC)
+---
+
+## 🛠️ Tech Stack
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Uvicorn](https://img.shields.io/badge/Uvicorn-FFCA28?style=for-the-badge&logo=python&logoColor=black)
+
+---
 
 ## 📂 Project Structure
+```
 youtube-pipeline/
-├── data/ # raw csvs (channels.csv, videos.csv)
+├── data/                   # raw YouTube CSVs or API data
+├── scripts/                # ETL scripts (extract, transform, load)
+│   ├── extract.py
+│   ├── transform.py
+│   └── load.py
 ├── database/
-│ └── schema.sql # DB schema
-├── scripts/ # ETL steps
-│ ├── extract.py
-│ ├── transform.py
-│ └── load.py
-├── api.py # FastAPI app (endpoints)
-├── run_api.py # uvicorn runner
-├── main.py # optional ETL orchestration
-├── requirements.txt
-├── .env # env vars (not committed)
-└── README.md
+│   └── schema.sql          # SQLite schema
+├── api.py                  # FastAPI endpoints
+├── run_api.py              # starts the REST API
+├── main.py                 # orchestrates the ETL pipeline
+├── requirements.txt        # dependencies
+├── .env                    # environment variables (ignored by git)
+├── .gitignore              # git ignore rules
+└── README.md               # documentation
+```
 
+---
 
-## 🚀 Quickstart
+## ⚙️ How to Run
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/NforcheDivine/youtube-analytics-etl-api.git
+cd youtube-analytics-etl-api
+```
+
+### 2️⃣ Install Dependencies
 ```bash
 pip install -r requirements.txt
+```
+
+### 3️⃣ Run the API
+```bash
 python run_api.py
+```
 
-Open:
+Open your browser and navigate to:  
+👉 **http://localhost:8000/docs**
 
-📘 API Docs: http://localhost:8000/docs
+---
 
-🌐 Health: http://localhost:8000/health
+## 📊 Example Endpoints
 
-🧠 Example Endpoints
-Method	Route	Description
-GET	/videos	Processed video analytics
-GET	/channels	Aggregated channel metrics
-POST	/refresh	Trigger ETL refresh (extract→load)
+- **`/extract`** – pulls YouTube data from source  
+- **`/transform`** – cleans and prepares the data  
+- **`/load`** – inserts processed data into the SQLite database  
+- **`/health`** – simple API health check  
 
+---
 
+## 📘 Future Improvements
+- Add Docker Compose support for database + API containers  
+- Integrate with Google YouTube Data API for real-time analytics  
+- Schedule ETL with Airflow or Prefect  
+
+---
+
+## 👨‍💻 Author
+**Nforche Divine Ako**  
+📧 [nforchedivine@gmail.com](mailto:nforchedivine@gmail.com)  
+🌐 [LinkedIn](https://www.linkedin.com/in/nforchedivine)
+
+---
+
+⭐ *If you like this project, consider starring it to support future improvements!*

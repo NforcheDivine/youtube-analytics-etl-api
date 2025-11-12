@@ -91,7 +91,7 @@ Open your browser and navigate to:
 ## 👨‍💻 Author
 **Nforche Divine Ako**  
 📧 [nforchedivine@gmail.com](mailto:nforchedivine@gmail.com)  
-🌐 [LinkedIn](https://www.linkedin.com/in/nforchedivine)
+💼 [LinkedIn](https://linkedin.com/in/nforche-divine-ako-7a821889)
 
 ---
 

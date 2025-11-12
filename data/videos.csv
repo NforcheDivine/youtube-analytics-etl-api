@@ -1,0 +1,6 @@
+video_id,channel_id,title,view_count,like_count,comment_count,published_at,engagement_rate
+video_1,UC_x5XG1OV2P6uZZ5FSM9Ttw,Sample Video 1,10000,500,100,2025-11-12 11:30:23.276528,0.06
+video_2,UC_x5XG1OV2P6uZZ5FSM9Ttw,Sample Video 2,20000,1000,200,2025-11-12 11:30:23.276531,0.06
+video_3,UC_x5XG1OV2P6uZZ5FSM9Ttw,Sample Video 3,30000,1500,300,2025-11-12 11:30:23.276532,0.06
+video_4,UC_x5XG1OV2P6uZZ5FSM9Ttw,Sample Video 4,40000,2000,400,2025-11-12 11:30:23.276534,0.06
+video_5,UC_x5XG1OV2P6uZZ5FSM9Ttw,Sample Video 5,50000,2500,500,2025-11-12 11:30:23.276535,0.06
